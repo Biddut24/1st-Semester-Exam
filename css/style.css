@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.search-box {
+  margin: 40px;
+}
+
+#search-input {
+  padding: 15px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+#search-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#food-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.food-item {
+  width: 200px;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.food-item:hover {
+  transform: scale(1.05);
+}
+.food-item img {
+  width: 100%;
+  border-radius: 12px;
+}
+.food-details {
+  text-align: center;
+  margin-top: 20px;
+}
+.food-details img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* Midiya Qurrye */
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  #search-input {
+    width: 200px;
+  }
+  .food-item {
+    width: 150px;
+  }
+  .food-details img {
+    width: 200px;
+  }
+}
+
+/* Tablet devices */
+@media (min-width: 601px) and (max-width: 900px) {
+  #search-input {
+    width: 250px;
+  }
+  .food-item {
+    width: 180px;
+  }
+  .food-details img {
+    width: 250px;
+  }
+}
+
+/* Desktop large screens */
+@media (min-width: 1200px) {
+  #search-input {
+    width: 400px;
+  }
+  .food-item {
+    width: 220px;
+  }
+  .food-details img {
+    width: 350px;
+  }
+}
