@@ -3,13 +3,13 @@ const searchInput = document.getElementById('search-input');
 const errorDiv = document.getElementById('error');
 const foodContainer = document.getElementById('food-container');
 
-let lastMeals = [];      // সর্বশেষ সার্চ রেজাল্ট
-let lastScroll = 0;      // স্ক্রল পজিশন সেভ করার জন্য
+let lastMeals = [];      
+let lastScroll = 0;     
 
-// বাটন ক্লিক
+
 searchBtn.addEventListener('click', searchFood);
 
-// Enter চাপলেও সার্চ হবে
+
 searchInput.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         searchFood();
@@ -54,11 +54,11 @@ function displayFood(meals) {
         const div = document.createElement('div');
         div.classList.add('food-item');
         div.innerHTML = `
-            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" 
             <h3>${meal.strMeal}</h3>
         `;
         div.addEventListener('click', function () {
-            lastScroll = window.scrollY; // 📌 ক্লিক করার সময় স্ক্রল পজিশন সেভ
+            lastScroll = window.scrollY; 
             showDetails(meal);
         });
         foodContainer.appendChild(div);
@@ -81,5 +81,5 @@ function showDetails(meal) {
 
 function goBack() {
     displayFood(lastMeals);
-    window.scrollTo(0, lastScroll); // 📌 আগের স্ক্রল পজিশনে ফিরে যাবে
+    window.scrollTo(0, lastScroll);
 }
